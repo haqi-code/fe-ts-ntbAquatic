@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router";
 import Button from "../../Components/Button";
-import { useMultiEvent } from "../../hooks/useMultiEvent";
 import type { MenuType } from "../../types/menuType";
 import type { Role } from "../../types/roleType";
+import { useEvent } from "../../hooks/useEvent";
 
 type Props = {
     role: Exclude<Role, "Juri">
 }
 
-export default function MultiEventAdminPage({ role }: Props) {
+export default function EventAdminPage({ role }: Props) {
     const navigate = useNavigate();
 
-    const { activeMenu, error, listMultiEvent, loading, setActiveMenu } = useMultiEvent(role)
+    const { activeMenu, error, listMultiEvent, loading, setActiveMenu } = useEvent(role)
 
     return (
         <div>
@@ -43,28 +43,28 @@ export default function MultiEventAdminPage({ role }: Props) {
 
                 {!loading && !error && (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {listMultiEvent.map((multiEvent) => (
+                        {listMultiEvent.map((event) => (
                             <div
-                                key={multiEvent.id}
+                                key={event.id}
                                 className="flex flex-col justify-between rounded-lg border bg-white p-5 shadow-sm hover:shadow-md transition"
                             >
                                 <div>
                                     <h1 className="font-semibold text-lg">
-                                        {multiEvent.nama_event}
+                                        {event.nama_event}
                                     </h1>
 
                                     <p className="text-sm text-blue-500 mt-1">
-                                        {multiEvent.tingkat}
+                                        {event.tingkat}
                                     </p>
 
                                     <p className="text-sm text-gray-600 mt-2 line-clamp-3">
-                                        {multiEvent.deskripsi}
+                                        {event.deskripsi}
                                     </p>
 
                                     <div className="flex gap-1 text-sm text-gray-500 mt-3">
-                                        <span>{multiEvent.start_date}</span>
+                                        <span>{event.start_date}</span>
                                         <span>-</span>
-                                        <span>{multiEvent.end_date}</span>
+                                        <span>{event.end_date}</span>
                                     </div>
                                 </div>
 
@@ -73,7 +73,7 @@ export default function MultiEventAdminPage({ role }: Props) {
                                         className="w-full"
                                         onClick={() =>
                                             navigate(
-                                                `/admin/multi-event/detail/${multiEvent.id}`
+                                                `/admin/multi-event/detail/${event.id}`
                                             )
                                         }
                                     >

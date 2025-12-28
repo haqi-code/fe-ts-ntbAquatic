@@ -1,85 +1,11 @@
-import type { JSX } from "react"
-import type { Role } from "../types/role"
-import { Calendar, ClipboardList, Gavel, Home, Medal } from "lucide-react"
 import { useLocation, useNavigate } from "react-router"
-
-type MenuItem = {
-    key: string,
-    path: string,
-    label: string,
-    icon: JSX.Element
-}
-
-type MenuSection = {
-    title: string,
-    items: MenuItem[]
-}
-
-type SidebarProps = {
-    role: Role
-}
-
+import { menus } from "../data/sidebarMenuData"
+import type { SidebarProps } from "../types/sidebarType"
 
 export default function Sidebar({ role }: SidebarProps) {
 
     const navigate = useNavigate()
     const location = useLocation()
-
-    const menus: Record<Role, MenuSection[]> = {
-        Admin: [
-            {
-                title: "Menu",
-                items: [
-                    { key: "", label: "Dashboard", path: "/admin", icon: <Home size={18} /> },
-                    { key: "multiEventAdmin", label: "Multi Event", path: "/multi-event", icon: <ClipboardList size={18} /> },
-                    { key: "eventAdmin", label: "Event", path: "/event", icon: <Calendar size={18} /> }
-                ]
-            },
-            {
-                title: "Master Data",
-                items: [
-                    { key: "atletAdmin", label: "Atlet", path: "/atlet", icon: <Medal size={18} /> },
-                    { key: "timeKeeperAdmin", label: "Time Keeper", path: "/time-keeper", icon: <Gavel size={18} /> }
-                ]
-            }
-        ],
-
-        AdminIndependen: [
-            {
-                title: "Menu",
-                items: [
-                    { key: "", label: "Dashboard", path: "/admin-independen", icon: <Home size={18} /> },
-                    { key: "multiEventAdminIndependen", label: "Multi Event", path: "/multi-event-admin-independen", icon: <ClipboardList size={18} /> },
-                    { key: "eventAdminIndependen", label: "Event", path: "/event", icon: <Calendar size={18} /> }
-                ]
-            },
-            {
-                title: "Master Data",
-                items: [
-                    { key: "atletAdmin", label: "Atlet", path: "/atlet", icon: <Medal size={18} /> },
-                    { key: "timeKeeperAdmin", label: "Time Keeper", path: "/time-keeper", icon: <Gavel size={18} /> }
-                ]
-            }
-        ],
-
-        Juri: [
-            {
-                title: "Menu",
-                items: [
-                    { key: "", label: "Dashboard", path: "/juri", icon: <Home size={18} /> },
-                    { key: "multiEventJuri", label: "Multi Event", path: "/multi-event-admin-independen", icon: <ClipboardList size={18} /> },
-                    { key: "eventJuri", label: "Event", path: "/event", icon: <Calendar size={18} /> }
-                ]
-            },
-            {
-                title: "Master Data",
-                items: [
-                    { key: "atletAdmin", label: "Atlet", path: "/atlet", icon: <Medal size={18} /> },
-                    { key: "timeKeeperAdmin", label: "Time Keeper", path: "/time-keeper", icon: <Gavel size={18} /> }
-                ]
-            }
-        ]
-    }
 
     const roleMenus = menus[role]
 

@@ -1,1 +1,1 @@
-export type MenuType = "semua" | "akanDatang" | "sedangBerlangsung" | "selesai"
+export type MenuType = "semua" | "akanDatang" | "sedangBerlangsung" | "selesai";

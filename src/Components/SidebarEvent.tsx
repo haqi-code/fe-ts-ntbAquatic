@@ -1,21 +1,6 @@
 import { Check } from "lucide-react"
-
-type MenuKey = "pendaftaran" | "juknis" | "lomba"
-
-interface MenuItem {
-    key: MenuKey,
-    label: string
-}
-
-interface SidebarEventProps {
-    onSelect: (key: MenuKey) => void
-}
-
-const menus: MenuItem[] = [
-    { key: "pendaftaran", label: "Pendaftaran", },
-    { key: "juknis", label: "Juknis" },
-    { key: "lomba", label: "Lomba" }
-]
+import type { SidebarEventProps } from "../types/sidebarEventType"
+import { menus } from "../data/sidebarEventMenuData"
 
 export default function SidebarEvent({ onSelect }: SidebarEventProps) {
     return (

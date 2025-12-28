@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import type { Role } from "./role";
+import type { Role } from "./roleType";
 
 export type protectedRoutes = {
   children: JSX.Element;

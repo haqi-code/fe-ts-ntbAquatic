@@ -1,6 +1,6 @@
 import { Navigate } from "react-router";
 import { getUserRole, isAuthenticated } from "./auth";
-import type { protectedRoutes } from "../types/protectedRoutes";
+import type { protectedRoutes } from "../types/protectedRoutesType";
 
 export default function ProtectedRoute({ children, role }: protectedRoutes) {
     if (!isAuthenticated()) {
