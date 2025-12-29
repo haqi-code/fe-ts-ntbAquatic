@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../libs/api";
 import type { baseEventType } from "../types/baseEventType";
-import { multiEventEndpointMap } from "../data/multiEventData";
+import { multiEventEndpointMap } from "../data/multiEventEndpoinMap";
 import type { Role } from "../types/roleType";
 import type { MenuType } from "../types/menuType";
 

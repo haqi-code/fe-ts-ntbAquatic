@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import api from "../libs/api";
-import type { AtletAdminType } from "../types/atletAdminType";
+import type { AtletType } from "../types/atletType";
 
 export default function useAtletAdmin() {
-  const [atlets, setAtlets] = useState<AtletAdminType[]>([]);
+  const [atlets, setAtlets] = useState<AtletType[]>([]);
 
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);

@@ -6,7 +6,7 @@ export default function AtletAdminPage() {
     return (
         <div className="p-6 max-w-6xl mx-auto text-white">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-xl font-bold">Master Data Atlet</h1>
+                <h1 className="text-xl text-gray-800 font-bold">Master Data Atlet</h1>
                 <button className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">
                     Tambah Atlet
                 </button>
@@ -34,13 +34,11 @@ export default function AtletAdminPage() {
                             </tr>
                         </thead>
 
-
-
                         <tbody>
                             {atlets.map((atlet, i) => (
                                 <tr key={i} className="">
                                     <td className="px-4 py-2 text-gray-800 border border-gray-700 text-center">{i + 1}</td>
-                                    <td className="px-4 py-2 text-gray-800 border border-gray-700">{atlet.nama}</td>
+                                    <td className="px-4 py-2 text-gray-800 border border-gray-700">{atlet.full_name}</td>
                                     <td className="px-4 py-2 text-gray-800 border border-gray-700">{atlet.nis}</td>
                                     <td className="px-4 py-2 text-gray-800 border border-gray-700">{atlet.nik}</td>
                                     <td className="px-4 py-2 text-gray-800 border border-gray-700">{atlet.email}</td>

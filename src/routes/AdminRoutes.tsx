@@ -5,6 +5,7 @@ import DashboardAdminPage from "../Page/Admin/DashboardAdminPage";
 import MultiEventAdminPage from "../Page/Admin/MultiEventAdminPage";
 import EventAdminPage from "../Page/Admin/EventAdminPage";
 import AtletAdminPage from "../Page/Admin/AtletAdminPage";
+import TimeKeeperAdminPage from '../Page/Admin/TimeKeeperAdminPage';
 
 export default function adminRoutes() {
     return (
@@ -18,6 +19,7 @@ export default function adminRoutes() {
             <Route path="multi-event" element={<MultiEventAdminPage role="Admin" />} />
             <Route path="event" element={<EventAdminPage role="Admin" />} />
             <Route path="atlet" element={<AtletAdminPage />} />
+            <Route path="time-keeper" element={<TimeKeeperAdminPage />} />
         </Route>
     )
 }
