@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import Button from "../../Components/Button";
 import { useMultiEvent } from "../../hooks/useMultiEvent";
 import type { MenuType } from "../../types/menuType";
@@ -9,9 +8,8 @@ type Props = {
 }
 
 export default function MultiEventAdminPage({ role }: Props) {
-    const navigate = useNavigate();
 
-    const { activeMenu, error, listMultiEvent, loading, setActiveMenu } = useMultiEvent(role)
+    const { activeMenu, error, listMultiEvent, loading, setActiveMenu, navigate } = useMultiEvent(role)
 
     return (
         <div>

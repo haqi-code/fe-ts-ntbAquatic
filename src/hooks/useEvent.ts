@@ -3,7 +3,7 @@ import api from "../libs/api";
 import type { baseEventType } from "../types/baseEventType";
 import type { Role } from "../types/roleType";
 import type { MenuType } from "../types/menuType";
-import { eventEndpointMap } from "../data/eventData";
+import { eventEndpointMap } from "../data/eventEndpointMap";
 
 export function useEvent(role: Exclude<Role, "Juri">) {
   const [activeMenu, setActiveMenu] = useState<MenuType>("semua");

@@ -13,9 +13,9 @@ export const multiEventEndpointMap: Record<
     },
 
     AdminIndependen: {
-        semua: "/admin-independen/multi-event",
-        akanDatang: "/admin-independen/multi-event",
-        sedangBerlangsung: "/admin-independen/multi-event?status=Berlangsung",
-        selesai: "/admin-independen/multi-event?status=Selesai",
+        semua: "/independen-admin/multi-event",
+        akanDatang: "/independen-admin/multi-event",
+        sedangBerlangsung: "/independen-admin/multi-event?status=Berlangsung",
+        selesai: "/independen-admin/multi-event?status=Selesai",
     },
 }

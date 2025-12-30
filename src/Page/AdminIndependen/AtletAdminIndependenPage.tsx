@@ -5,7 +5,7 @@ type AtletRoleProps = {
     role: Exclude<Role, "Juri">;
 };
 
-export default function AtletAdminPage({role} : AtletRoleProps) {
+export default function AtletIndependenPage({role} : AtletRoleProps) {
     const { atlets, error, loading } = useAtlet(role)
 
     return (

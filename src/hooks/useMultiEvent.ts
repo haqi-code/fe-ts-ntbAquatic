@@ -4,12 +4,14 @@ import type { baseEventType } from "../types/baseEventType";
 import { multiEventEndpointMap } from "../data/multiEventEndpoinMap";
 import type { Role } from "../types/roleType";
 import type { MenuType } from "../types/menuType";
+import { useNavigate } from "react-router";
 
 export function useMultiEvent(role: Exclude<Role, "Juri">) {
   const [activeMenu, setActiveMenu] = useState<MenuType>("semua");
   const [listMultiEvent, setListMultiEvent] = useState<baseEventType[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,5 +39,6 @@ export function useMultiEvent(role: Exclude<Role, "Juri">) {
     listMultiEvent,
     loading,
     error,
+    navigate
   };
 }

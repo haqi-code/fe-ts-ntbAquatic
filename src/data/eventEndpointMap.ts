@@ -13,9 +13,9 @@ export const eventEndpointMap: Record<
     },
 
     AdminIndependen: {
-        semua: "/admin/event",
-        akanDatang: "/admin/event",
-        sedangBerlangsung: "/admin/event?status=Berlangsung",
-        selesai: "/admin/event?status=Selesai",
+        semua: "/independen-admin/event",
+        akanDatang: "/independen-admin/event",
+        sedangBerlangsung: "/independen-admin/event?status=Berlangsung",
+        selesai: "/independen-admin/event?status=Selesai",
     },
 }

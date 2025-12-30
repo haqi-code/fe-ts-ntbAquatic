@@ -27,14 +27,14 @@ export const menus: Record<Role, MenuSection[]> = {
             title: "Menu",
             items: [
                 { key: "", label: "Dashboard", path: "/admin-independen", icon: <Home size={18} /> },
-                { key: "multiEventAdminIndependen", label: "Multi Event", path: "/multi-event-admin-independen", icon: <ClipboardList size={18} /> },
+                { key: "multiEventAdminIndependen", label: "Multi Event", path: "/admin-independen/multi-event", icon: <ClipboardList size={18} /> },
                 { key: "eventAdminIndependen", label: "Event", path: "/admin-independen/event", icon: <Calendar size={18} /> }
             ]
         },
         {
             title: "Master Data",
             items: [
-                { key: "atletAdmin", label: "Atlet", path: "/atlet", icon: <Medal size={18} /> },
+                { key: "atletAdmin", label: "Atlet", path: "/admin-independen/atlet", icon: <Medal size={18} /> },
                 { key: "timeKeeperAdmin", label: "Time Keeper", path: "/admin-independen/time-keeper", icon: <Gavel size={18} /> }
             ]
         }

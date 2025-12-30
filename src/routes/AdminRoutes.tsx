@@ -14,12 +14,12 @@ export default function adminRoutes() {
                 <AdminLayout />
             </ProtectedRoute>
         }>
-            
+
             <Route index element={<DashboardAdminPage />} />
             <Route path="multi-event" element={<MultiEventAdminPage role="Admin" />} />
             <Route path="event" element={<EventAdminPage role="Admin" />} />
-            <Route path="atlet" element={<AtletAdminPage />} />
-            <Route path="time-keeper" element={<TimeKeeperAdminPage />} />
+            <Route path="atlet" element={<AtletAdminPage role="Admin" />} />
+            <Route path="time-keeper" element={<TimeKeeperAdminPage role="Admin" />} />
         </Route>
     )
 }

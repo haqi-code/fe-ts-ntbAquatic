@@ -5,7 +5,7 @@ type TimeKeeperRole = {
     role: Exclude<Role, "Juri">
 }
 
-export default function TimeKeeperAdminPage({role} : TimeKeeperRole) {
+export default function TimeKeeperAdminIndependenPage({ role }: TimeKeeperRole) {
 
     const { error, loading, listTimeKeeper } = useTimeKeeperAdmin(role)
     return (
@@ -60,44 +60,6 @@ export default function TimeKeeperAdminPage({role} : TimeKeeperRole) {
                     </table>
                 </div>
             )}
-
-
-            {/*
-            <div className="mt-10 border border-gray-700 rounded p-6">
-                <h2 className="text-lg font-semibold mb-4">Form Atlet</h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input
-                        type="text"
-                        placeholder="Nama"
-                        className="p-2 rounded bg-gray-800 border border-gray-700"
-                    />
-                    <input
-                        type="text"
-                        placeholder="NIS"
-                        className="p-2 rounded bg-gray-800 border border-gray-700"
-                    />
-                    <input
-                        type="text"
-                        placeholder="NIK"
-                        className="p-2 rounded bg-gray-800 border border-gray-700"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        className="p-2 rounded bg-gray-800 border border-gray-700"
-                    />
-                </div>
-
-                <div className="mt-4 flex gap-2">
-                    <button className="px-4 py-2 bg-green-600 rounded hover:bg-green-700">
-                        Simpan
-                    </button>
-                    <button className="px-4 py-2 bg-gray-600 rounded hover:bg-gray-700">
-                        Batal
-                    </button>
-                </div>
-            </div> */}
         </div>
     );
 
