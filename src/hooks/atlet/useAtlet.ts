@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import api from "../libs/api";
-import type { AtletType } from "../types/atletType";
-import { atletEndpointMap } from "../data/atletEndpointMap";
-import type { Role } from "../types/roleType";
+import api from "../../libs/api";
+import type { AtletType } from "../../types/atletType";
+import { atletEndpointMap } from "../../data/atletEndpointMap";
+import type { Role } from "../../types/roleType";
+import { useNavigate } from "react-router";
 
-
-
-export default function useAtlet(role : Exclude<Role,"Juri">) {
+export default function useAtlet(role: Exclude<Role, "Juri">) {
   const [atlets, setAtlets] = useState<AtletType[]>([]);
 
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,5 +33,5 @@ export default function useAtlet(role : Exclude<Role,"Juri">) {
     fetchData();
   }, [role]);
 
-  return { atlets, error, loading };
+  return { atlets, error, loading, navigate, setAtlets };
 }

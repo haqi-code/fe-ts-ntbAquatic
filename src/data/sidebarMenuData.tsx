@@ -17,7 +17,8 @@ export const menus: Record<Role, MenuSection[]> = {
             title: "Master Data",
             items: [
                 { key: "atletAdmin", label: "Atlet", path: "/admin/atlet", icon: <Medal size={18} /> },
-                { key: "timeKeeperAdmin", label: "Time Keeper", path: "/admin/time-keeper", icon: <Gavel size={18} /> }
+                { key: "timeKeeperAdmin", label: "Time Keeper", path: "/admin/time-keeper", icon: <Gavel size={18} /> },
+                { key: "juri", label: "Juri", path: "/admin/juri", icon: <Gavel size={18} /> }
             ]
         }
     ],
@@ -35,7 +36,7 @@ export const menus: Record<Role, MenuSection[]> = {
             title: "Master Data",
             items: [
                 { key: "atletAdmin", label: "Atlet", path: "/admin-independen/atlet", icon: <Medal size={18} /> },
-                { key: "timeKeeperAdmin", label: "Time Keeper", path: "/admin-independen/time-keeper", icon: <Gavel size={18} /> }
+                { key: "juri", label: "Juri", path: "/admin-independen/juri", icon: <Gavel size={18} /> }
             ]
         }
     ],
