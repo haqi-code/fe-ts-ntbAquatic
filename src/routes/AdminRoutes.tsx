@@ -9,6 +9,7 @@ import TimeKeeperAdminPage from '../Page/Admin/TimeKeeperAdminPage';
 import JuriAdminPage from "../Page/Admin/JuriAdminPage";
 import AddAtletAdminPage from "../Page/Admin/Atlet/AddAtletAdminPage";
 import EditAtletAdminPage from "../Page/Admin/Atlet/EditAtletAdminPage";
+import EventDetailLayout from "../layouts/EventDetailLayout";
 
 export default function adminRoutes() {
     return (
@@ -28,6 +29,9 @@ export default function adminRoutes() {
 
             <Route path="time-keeper" element={<TimeKeeperAdminPage role="Admin" />} />
             <Route path="juri" element={<JuriAdminPage role="Admin" />} />
+
         </Route>
+
+        
     )
 }
